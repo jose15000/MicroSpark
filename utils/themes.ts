@@ -1,0 +1,42 @@
+export const themes = [
+  {
+    name: "Purple",
+    id: "purple",
+    baseColor: "bg-purple-600",
+    gradientFrom: "from-purple-600",
+    gradientTo: "to-purple-400",
+    secondaryColor: "bg-purple-100",
+  },
+  {
+    name: "Ocean",
+    id: "ocean",
+    baseColor: "bg-sky-600",
+    gradientFrom: "from-sky-600",
+    gradientTo: "to-sky-400",
+    secondaryColor: "bg-sky-100",
+  },
+  {
+    name: "Sunset",
+    id: "sunset",
+    baseColor: "bg-orange-600",
+    gradientFrom: "from-orange-600",
+    gradientTo: "to-orange-400",
+    secondaryColor: "bg-orange-100",
+  },
+  {
+    name: "Forest",
+    id: "forest",
+    baseColor: "bg-emerald-600",
+    gradientFrom: "from-emerald-600",
+    gradientTo: "to-emerald-400",
+    secondaryColor: "bg-emerald-100",
+  },
+  {
+    name: "Monochrome",
+    id: "monochrome",
+    baseColor: "bg-gray-600",
+    gradientFrom: "from-gray-600",
+    gradientTo: "to-gray-400",
+    secondaryColor: "bg-gray-100",
+  },
+];
