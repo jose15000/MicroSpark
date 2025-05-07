@@ -1,12 +1,12 @@
-import { themes } from "@/utils/themes";
+import { palettes } from "@/utils/palettes";
 import { Button } from "../ui/button";
 
 type props = {
-  theme: string;
+  palette: string;
 };
 
-export default function Header({ theme }: props) {
-  const selectedTheme = themes.find((t) => t.id === theme);
+export default function Header({ palette }: props) {
+  const selectedpalette = palettes.find((t) => t.id === palette);
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
@@ -15,19 +15,19 @@ export default function Header({ theme }: props) {
         </div>
 
         <nav className="absolute left-1/2 transform -translate-x-1/2 flex gap-6">
-          <a href="#features" className={``}>
+          <a href="#features" className={`${selectedpalette?.hover}`}>
             Features
           </a>
-          <a href="#testimonials" className={``}>
+          <a href="#testimonials" className={`${selectedpalette?.hover}`}>
             Testimonials
           </a>
-          <a href="#pricing" className="hover:underline">
+          <a href="#pricing" className={`${selectedpalette?.hover}`}>
             Pricing
           </a>
         </nav>
         <Button
           variant="default"
-          className={`rounded-full ${selectedTheme?.baseColor}`}
+          className={`rounded-full ${selectedpalette?.baseColor} dark:text-white`}
         >
           Get Started
         </Button>

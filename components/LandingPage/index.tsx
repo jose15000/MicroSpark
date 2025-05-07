@@ -1,15 +1,23 @@
+import Features from "../Features";
 import Header from "../Header";
 import { HeroSection } from "../HeroSection";
+import Pricing from "../Pricing";
+import { Testimomials } from "../Testimonials";
+import TrustedCompanies from "../TrustedCompanies";
 
 type Props = {
-  theme: string;
+  palette: string;
 };
 
-export default function LandingPage({ theme }: Props) {
+export default function LandingPage({ palette }: Props) {
   return (
     <div>
-      <Header theme={theme} />
-      <HeroSection theme={theme} />
+      <Header palette={palette} />
+      <HeroSection palette={palette} />
+      <TrustedCompanies />
+      <Features />
+      <Testimomials palette={palette} />
+      <Pricing />
     </div>
   );
 }
