@@ -1,3 +1,4 @@
+import { FAQ } from "../FAQ";
 import Features from "../Features";
 import Header from "../Header";
 import { HeroSection } from "../HeroSection";
@@ -17,7 +18,8 @@ export default function LandingPage({ palette }: Props) {
       <TrustedCompanies />
       <Features />
       <Testimomials palette={palette} />
-      <Pricing />
+      <Pricing palette={palette} />
+      <FAQ />
     </div>
   );
 }
