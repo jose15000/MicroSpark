@@ -13,8 +13,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Chrome } from "lucide-react";
-import { signIn } from "next-auth/react";
+import Google from "@/public/svg/google";
+import { SigninButton } from "../SiginButton";
 
 export default function LoginPage() {
   return (
@@ -73,14 +73,12 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <Button
-              variant="outline"
-              className="w-full"
-              onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-            >
-              <Chrome className="mr-2 h-4 w-4" />
-              Sign in with Google
-            </Button>
+            <SigninButton
+              provider="google"
+              text="Sigin with google"
+              callbackUrl="/dashboard"
+              icon={<Google />}
+            />
           </CardContent>
           <Separator />
           <CardFooter className="flex justify-center p-6">
