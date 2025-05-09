@@ -74,8 +74,8 @@ export default function LoginPage() {
             </div>
 
             <SigninButton
-              provider="google"
-              text="Sigin with google"
+              provider="facebook"
+              text="Sigin with facebook"
               callbackUrl="/dashboard"
               icon={<Google />}
             />
