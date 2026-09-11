@@ -11,7 +11,18 @@
     "clean": "turbo run clean && rm -rf node_modules"
   },
   "devDependencies": {
+    "@types/node": "^22.20.2",
+    "tsx": "^4.23.13",
     "turbo": "^2.4.4",
-    "typescript": "^5.7.3"
-  }
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "zod": "^4.6.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
